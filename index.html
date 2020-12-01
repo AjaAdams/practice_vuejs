@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+    <div id="app">
+      {{ message }}
+      <h2>Hello, my name is {{ name }}</h2>
+      <h3>What is your name? Enter it in the box</h3>
+      <input type="text" v-model="name">
+      <button v-on:click="toggleElement()">Toggle</button>
+      <p v-if="showExtraInfo">Extra Stuff</p>
+
+      <div v-for="fruit in fruits">
+        <p>{{ fruit }}</p>
+      </div>
+
+      <input type="text" v-model="newFruit"></input>
+      <button v-on:click="addFruit()">Add a fruit!</button>
+    </div>
+
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+
+    <div id="app-5">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+      <input type="text" v-model="message">
+    </div>
+
+  </body>
+</html>
