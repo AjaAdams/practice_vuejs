@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Practice Vue.js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -22,6 +23,12 @@
 
       <input type="text" v-model="newFruit"></input>
       <button v-on:click="addFruit()">Add a fruit!</button>
+
+      <button v-on:click="loadTodos()">Load Todos!</button>
+
+      <div v-for="todo in todos">
+        <p>{{ todo }}</p>
+      </div>
     </div>
 
     <div id="app-4">
